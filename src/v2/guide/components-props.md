@@ -163,9 +163,11 @@ post: {
 
   ``` js
   props: ['size'],
-  computed: {
-    normalizedSize: function () {
-      return this.size.trim().toLowerCase()
+  computed: function () {
+    return {
+      normalizedSize: function () {
+        return this.size.trim().toLowerCase()
+      }
     }
   }
   ```
